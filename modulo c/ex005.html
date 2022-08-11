@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="nome">Document Object Model</h1>
+    <p>Aqui vai o resultado</p>
+    <p name="paragrafo">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em min</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+        document.write('Estar escrito assim => '+p1.innerHTML+'<br/>');
+
+        var p2 = document.getElementById('nome');
+        document.write('Escrito assim => '+p2.innerHTML+'<br/>');
+
+        var p3 = document.getElementsByName('paragrafo')[0]
+        document.write('Assim => '+p3.innerHTML);
+        
+    </script>
+    <p></p>
+</body>
+</html>

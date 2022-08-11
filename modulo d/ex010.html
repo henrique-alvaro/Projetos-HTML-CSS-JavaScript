@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #res{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Valocidade do Carro: <input type="number" id="velocidade">
+    <input type="button" value="Verificar" id="verificar" onclick="verificar()">
+    <div id="res">Verificando Velocidade...</div>
+    <script>
+        function verificar(){
+            var vel = document.getElementById('velocidade');
+            var r = document.getElementById('res');
+            var valor = Number(vel.value);
+            r.innerHTML = `Sua Velocidade atual e de <strong>${valor}</strong`;
+            if (valor > 60){
+                r.innerHTML += `<p>Voce estar <strong>MULTADO</strong> por excesso de velocidae</p>`;
+            }
+            r.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`;
+
+        }
+    </script>
+</body>
+</html>
